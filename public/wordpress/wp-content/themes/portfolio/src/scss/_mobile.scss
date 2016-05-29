@@ -1,0 +1,49 @@
+.wrapper{
+	header{
+		text-align: center;
+		@include outline('1px', 'black');
+		.headlink{
+			color: $primaryColor;
+			font-size: 2em;
+			text-decoration: none;
+		}
+		nav{
+			ul{
+				list-style: none;
+				padding: 0 0 0 0;
+				li{
+					display: block;
+					a{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	main{
+		// @include outline('1px', 'black');
+		text-align: center;
+		article{
+			@include outline('1px', 'black');
+			background-color: silver;
+			margin: 5% 5% 5% 5%;
+			padding: 5% 5% 5% 5%;
+			text-align: left;
+			img{
+				width: 200px;
+			}
+		}
+	}
+	aside{
+		@include outline('1px', 'black');
+		text-align: center;
+		ul{
+			list-style: none;
+			padding: 0 0 0 0;
+		}
+	}
+	footer{
+		@include outline('1px', 'black');
+		text-align: center;
+	}
+}

@@ -1,0 +1,23 @@
+@mixin outline($border, $col){
+	outline: $border solid $col;
+}
+@mixin clearfix {
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear:both;
+	}
+}
+@mixin img($url) {
+	background-image: url($url);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+@mixin fixFont($weight, $size){
+	font-weight: $weight;
+	font-family: 'Roboto', sans-serif;
+	font-size: $size;
+}
