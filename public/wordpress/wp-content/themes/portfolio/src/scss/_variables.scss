@@ -1,6 +1,5 @@
-$primaryColor: #73E6C5;
+$primaryColor: rgb(137, 198, 178);
 $brightText: white;
-$black: #000;
-$white: #fff;
-$compColor: #7EDEC3;
+$compColor: lighten($primaryColor, 10%);
+$darkColor: darken($primaryColor, 20%);
 $darkBackground: black;
