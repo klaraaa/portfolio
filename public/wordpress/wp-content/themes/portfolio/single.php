@@ -35,7 +35,7 @@
 
 			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
 
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+			<!-- <p><?php //_e( 'This post was written by ', 'html5blank' ); the_author(); ?></p> -->
 
 			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 

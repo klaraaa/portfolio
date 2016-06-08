@@ -1,11 +1,44 @@
 body{
-	font-size:0.625em;
-		.wrapper{
+  font-size:0.625em;
+  .wrapper{
+  	/*
+  	* Typography - general
+  	*/
+  	h1{
+      @include fixFont(700, 2.5em);
+    }
+  	h2{
+      @include fixFont(700, 2em);
+    }
+  	h3{
+      @include fixFont(700, 1.8em);
+    }
+  	h4{
+      @include fixFont(700, 1.5em);
+    }
+  	h5{
+      @include fixFont(400, 1em);
+    }
+  	p{
+      @include fixFont(300, 1em);
+    }
+    /*
+    * Links - general
+    */
+    a {
+      text-decoration: none;
+      color: $primaryColor;
+      &:hover {
+        color: $darkColor;
+      }
+      &:active {
+        color: $compColor;
+      }
+    }
 		header{
 			padding: 2em 0 1.5em 0;
 			text-align: center;
 			background-color: $darkBackground;
-			
 			.headcontainer{
 				.logo{
 					float: left;
@@ -13,15 +46,16 @@ body{
 					text-align: left;
 					padding-left: 5%;
 					box-sizing: border-box;
-					.headlink{
-						color: $brightText;
-						font-size: 2em;
-						text-decoration: none;
-						font-weight: bold;
+					h1{
+						margin: 0 0 0 0;
+						.headlink{
+							color: $brightText;
+							@include fixFont(900, 1em);
+							text-decoration: none;
+						}
 					}
 				}
-
-				.menu-icon{
+				#menu-icon{
 					box-sizing: border-box;
 					text-align: right;
 					padding-right: 5%;
@@ -36,7 +70,8 @@ body{
 		nav{
 			width: 100%;
 			padding: 0 0 0 0;
-			background-color: $primaryColor;
+			background-color: $compColor;
+      text-align: center;
 			ul{
 				list-style: none;
 				margin: 0 0 0 0;
@@ -44,7 +79,8 @@ body{
 				li{
 					display: block;
 					a{
-						text-decoration: none;
+            color: $brightText;
+            @include fixFont(400, 2em);
 					}
 				}
 			}
@@ -52,12 +88,19 @@ body{
 		main{
 			text-align: center;
 			article{
-				background-color: silver;
-				margin: 5% 5% 5% 5%;
+				background-color: $primaryColor;
+        // @include border(3px, $primaryColor);
+				margin: 3em 0 3em 0;
 				padding: 5% 5% 5% 5%;
 				text-align: left;
+        @include clearfix;
+        a{
+          color: $brightText;
+        }
 				img{
-					// width: 200px;
+					width: 20%;
+          float: left;
+          margin-right: 5%;
 				}
 			}
 		}
@@ -71,8 +114,9 @@ body{
 		footer{
 			text-align: center;
 			color: $brightText;
+      padding: 1em 0 1em 0;
 			background-color: $darkBackground;
-			@include border('1px', red);
+			// @include border('1px', red);
 		}
 	}
 }

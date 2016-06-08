@@ -46,7 +46,7 @@
 					<!-- /logo -->
 
 					<!-- menu icon -->
-					<div class='menu-icon clear'>
+					<div class='clear' id='menu-icon'>
 						<span><i class="fa fa-bars fa-3x" aria-hidden="true"></i></span>
 					</div>
 				</div>
@@ -55,7 +55,7 @@
 			<!-- /header -->
 
 			<!-- nav -->
-			<nav class="nav" role="navigation">
+			<nav class="nav" id="main-nav" role="navigation">
 				<?php html5blank_nav(); ?>
 			</nav>
 			<!-- /nav -->

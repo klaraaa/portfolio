@@ -2,9 +2,9 @@
 			<footer class="footer" role="contentinfo">
 
 				<!-- copyright -->
-				<p class="copyright">
+				<h5 class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>
-				</p>
+				</h5>
 				<!-- /copyright -->
 
 			</footer>
