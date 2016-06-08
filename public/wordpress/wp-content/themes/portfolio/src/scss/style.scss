@@ -1,51 +1,200 @@
-// @import "normalize";
-@import "variables";
-@import "mixins";
-/* ---- Mobile first, gäller iPhone 5-läget ---- */
-@import "mobile";
+/*
+	Theme Name: Portfolio Theme - Klara
+	Theme URI: http://www.kollerstrom.com
+	Description: Portfolio theme
+	Version: 1.0
+	Author: Klara Köllerström
+	Author URI: http://www.kollerstrom.se
+	Tags: Portfolio theme
 
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+@import "normalize";
 
-/* ----------- iPhone 6 ----------- */
-/* Portrait and Landscape */
-// @media screen 
-//   and (min-device-width: 375px) 
-//   and (max-device-width: 667px) 
-//   and (-webkit-min-device-pixel-ratio: 2) { 
-// 	@import "iphone6";
-
-// }
-
-
-/* ----------- iPad mini ----------- */
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    @import "tablet768";
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
 }
 
-/* ----------- android tablet ----------- */
-/* Portrait and Landscape */
-// @media 
-//   (min-device-width: 800px) 
-//   and (max-device-width: 1280px) {
-// 		@import "androidtab";
+/* html element 62.5% font-size for REM use */
+html {
+	// font-size:62.5%;
+}
 
-// }
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+}
+.alignright {
+	float:right;
+}
+.alignleft {
+	float:left;
+}
+a img.alignright {
+	float:right;
+}
+a img.alignnone {
+	// margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+}
+.wp-caption.alignnone {
+}
+.wp-caption.alignleft {
+}
+.wp-caption.alignright {
+}
+.wp-caption img {
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+/*------------------------------------*\
+    IMPORTS
+\*------------------------------------*/
+
+@import "variables";
+@import "mixins";
 
 
-// @media only screen and(min-width: 1024px){
-// 	@import "desktopsmall";
 
-// }
+/*------------------------------------*\
+    RESPONSIVE - Mobile first
+\*------------------------------------*/
 
-/* Desktops and laptops ----------- */
-// @media only screen  and (min-width : 1224px) {
-// 	@import "desktoplarge";
-// }
+@import "mobile";
 
-/* Large screens ----------- */
-// @media only screen  and (min-width : 1824px) {
-// 	@import "desktoplarge";
-// }
+@media only screen and (min-width:768px) {
+	@import "tablet768";
+}
+@media only screen and (min-width:1024px) {
+	//@import "desktopsmall";
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+	//@import "desktoplarge";
+
+}

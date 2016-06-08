@@ -13,6 +13,7 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
+		<script src="https://use.fontawesome.com/d79f7aa0cb.js"></script>
 		<script>
         // conditionizr.com
         // configure environment tests
@@ -30,23 +31,31 @@
 
 			<!-- header -->
 			<header class="header clear" role="banner">
-
+				<div class="headcontainer clear">
 					<!-- logo -->
-					<div class="logo">
-						<a class='headlink' href="<?php echo home_url(); ?>">
-							<?php echo bloginfo('name'); ?>
+					<div class="logo clear">
+						<h1>
+							<a class='headlink' href="<?php echo home_url(); ?>">
+								<?php echo bloginfo('name'); ?>
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 							<!-- <img src="<?php 
 							//echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img"> -->
-						</a>
+							</a>
+						</h1>
 					</div>
 					<!-- /logo -->
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
+					<!-- menu icon -->
+					<div class='menu-icon clear'>
+						<span><i class="fa fa-bars fa-3x" aria-hidden="true"></i></span>
+					</div>
+				</div>
 
 			</header>
 			<!-- /header -->
+
+			<!-- nav -->
+			<nav class="nav" role="navigation">
+				<?php html5blank_nav(); ?>
+			</nav>
+			<!-- /nav -->

@@ -1,5 +1,6 @@
-@mixin outline($border, $col){
-	outline: $border solid $col;
+@mixin border($border, $color){
+	//border: $border solid $col;
+	border: $border solid $color;
 }
 @mixin clearfix {
 	&:before, &:after {

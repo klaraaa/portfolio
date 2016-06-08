@@ -1,15 +1,45 @@
-.wrapper{
-	header{
-		text-align: center;
-		@include outline('1px', 'black');
-		.headlink{
-			color: $primaryColor;
-			font-size: 2em;
-			text-decoration: none;
+body{
+	font-size:0.625em;
+		.wrapper{
+		header{
+			padding: 2em 0 1.5em 0;
+			text-align: center;
+			background-color: $darkBackground;
+			
+			.headcontainer{
+				.logo{
+					float: left;
+					width: 80%;
+					text-align: left;
+					padding-left: 5%;
+					box-sizing: border-box;
+					.headlink{
+						color: $brightText;
+						font-size: 2em;
+						text-decoration: none;
+						font-weight: bold;
+					}
+				}
+
+				.menu-icon{
+					box-sizing: border-box;
+					text-align: right;
+					padding-right: 5%;
+					width: 20%;
+					float: left;
+					.fa{
+						color: white;
+					}
+				}
+			}
 		}
 		nav{
+			width: 100%;
+			padding: 0 0 0 0;
+			background-color: $primaryColor;
 			ul{
 				list-style: none;
+				margin: 0 0 0 0;
 				padding: 0 0 0 0;
 				li{
 					display: block;
@@ -19,31 +49,30 @@
 				}
 			}
 		}
-	}
-	main{
-		// @include outline('1px', 'black');
-		text-align: center;
-		article{
-			@include outline('1px', 'black');
-			background-color: silver;
-			margin: 5% 5% 5% 5%;
-			padding: 5% 5% 5% 5%;
-			text-align: left;
-			img{
-				width: 200px;
+		main{
+			text-align: center;
+			article{
+				background-color: silver;
+				margin: 5% 5% 5% 5%;
+				padding: 5% 5% 5% 5%;
+				text-align: left;
+				img{
+					// width: 200px;
+				}
 			}
 		}
-	}
-	aside{
-		@include outline('1px', 'black');
-		text-align: center;
-		ul{
-			list-style: none;
-			padding: 0 0 0 0;
+		aside{
+			text-align: center;
+			ul{
+				list-style: none;
+				padding: 0 0 0 0;
+			}
 		}
-	}
-	footer{
-		@include outline('1px', 'black');
-		text-align: center;
+		footer{
+			text-align: center;
+			color: $brightText;
+			background-color: $darkBackground;
+			@include border('1px', red);
+		}
 	}
 }
