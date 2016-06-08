@@ -1,5 +1,6 @@
 body{
   font-size:0.625em;
+  background-color: silver;
   .wrapper{
   	/*
   	* Typography - general
@@ -17,10 +18,10 @@ body{
       @include fixFont(700, 1.5em);
     }
   	h5{
-      @include fixFont(400, 1em);
+      @include fixFont(400, 1.2em);
     }
   	p{
-      @include fixFont(300, 1em);
+      @include fixFont(300, 1.2em);
     }
     /*
     * Links - general
@@ -35,6 +36,7 @@ body{
         color: $compColor;
       }
     }
+    background-color: white;
 		header{
 			padding: 2em 0 1.5em 0;
 			text-align: center;
@@ -80,7 +82,7 @@ body{
 					display: block;
 					a{
             color: $brightText;
-            @include fixFont(400, 2em);
+            @include fixFont(400, 1.8em);
 					}
 				}
 			}
@@ -94,7 +96,11 @@ body{
 				padding: 5% 5% 5% 5%;
 				text-align: left;
         @include clearfix;
-        a{
+        h1{
+          width: 100%;
+          margin-top: 0em;
+        }
+       a{
           color: $brightText;
         }
 				img{

@@ -1,35 +1,89 @@
-.wrapper{
-	header{
-			
-		.headlink{
-		
-		}
-	}
-	nav{
-		ul{
-		
-			li{
-				a{
+body{
+	font-size:0.625em;
+  .wrapper{
+  	/*
+  	* Typography - general
+  	*/
+  	h1{
+      @include fixFont(700, 2.5em);
+    }
+  	h2{
+      @include fixFont(700, 2.3em);
+    }
+  	h3{
+      @include fixFont(700, 2em);
+    }
+  	h4{
+      @include fixFont(700, 1.8em);
+    }
+  	h5{
+      @include fixFont(400, 1.5em);
+    }
+  	p{
+      @include fixFont(300, 1.5em);
+    }
+    /*
+    * Links - general
+    */
+    a {
+      &:hover {
+      }
+      &:active {
+      }
+    }
+		header{
+			.headcontainer{
+				.logo{
+					h1{
+						.headlink{
+							@include fixFont(900, 2em);
+						}
+					}
 				}
 			}
 		}
-	}
-	main{
-	
-		article{
-			
-			img{
-				width: 500px;
+		nav{
+			ul{
+				@include clearfix;
+				li{
+					float: left;
+					padding: 0.5em 0.5em 0.5em 0.5em;
+					a{
+					}
+				}
 			}
 		}
-	}
-	aside{
-	
-		ul{
+		main{
+			float: left;
+			width: 75%;
+			box-sizing: border-box;
+			article{
+				margin: 5% 5% 5% 5%;
+				img{
+				}
+			}
+			@include clearfix;
+			.articles{
+				width: 43%;
+				box-sizing: border-box;
+				float: left;
+				margin: 3% 3% 3% 3%;
+				padding: 1em 1em 1em 1em;
+			}
+		}
+		aside{
+			float: left;
+			width: 25%;
+			box-sizing: border-box;
+			ul{
+				
+			}
+		}
+		@include clearfix;
+		footer{
+			float: left;
+			width: 100%;
 			
 		}
-	}
-	footer{
-		
 	}
 }
