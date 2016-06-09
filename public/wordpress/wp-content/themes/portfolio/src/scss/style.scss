@@ -189,7 +189,7 @@ a img.aligncenter {
 	@import "tablet768";
 }
 @media only screen and (min-width:1024px) {
-	//@import "desktopsmall";
+	@import "desktopsmall";
 }
 @media only screen and (min-width:1140px) {
 

@@ -1,0 +1,74 @@
+body{
+	font-size:0.625em;
+  .wrapper{
+  	/*
+  	* Typography - general
+  	*/
+  	h1{
+      @include fixFont(700, 3em);
+    }
+  	h2{
+      @include fixFont(700, 2.5em);
+    }
+  	h3{
+      @include fixFont(700, 2.3em);
+    }
+  	h4{
+      @include fixFont(700, 2em);
+    }
+  	h5{
+      @include fixFont(400, 1.8em);
+    }
+  	p{
+      @include fixFont(300, 1.8em);
+    }
+    /*
+    * Links - general
+    */
+    a {
+      &:hover {
+      }
+      &:active {
+      }
+    }
+		header{
+			.headcontainer{
+				.logo{
+					h1{
+						.headlink{
+							@include fixFont(900, 2em);
+						}
+					}
+				}
+			}
+		}
+		nav{
+			ul{
+				@include clearfix;
+				li{
+					padding: 0.5em 2em 0.5em 2em;
+					a{
+					}
+				}
+			}
+		}
+		main{
+			article{
+				img{
+				}
+			}
+			@include clearfix;
+			.articles{
+				width: 29%;
+				margin: 3% 2% 3% 2%;
+			}
+		}
+		aside{
+			ul{
+			}
+		}
+		@include clearfix;
+		footer{
+		}
+	}
+}
