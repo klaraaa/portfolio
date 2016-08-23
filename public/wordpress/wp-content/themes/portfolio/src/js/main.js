@@ -1,5 +1,6 @@
   jQuery(document).ready(function($) {
   console.log('main js inläst');
+  
   //Desktop view
   if ($(window).width() >= 1024) {
     //Göm hamburgerikon
